@@ -1,4 +1,4 @@
-#include "std_lib_facilities.h"
+#include "../../std_lib_facilities.h"
 
 int main()
 {
@@ -26,7 +26,6 @@ int main()
 		if(abs(first_number-second_number)<0.01)
 			cout << "The numbers are almost equal";
 		
-		if 
 
 	return '|';
 }
