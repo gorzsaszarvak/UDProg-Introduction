@@ -1,4 +1,4 @@
-#include "std_lib_facilities.h"
+#include "../../std_lib_facilities.h"
 
 int main()
 {
@@ -28,6 +28,8 @@ int main()
 		cout << "If you see " << friend_name << " please ask him to call me.\n";
 	if (friend_sex == 'f')
 		cout << "If you see " << friend_name << " please ask her to call me.\n";
+	if (friend_sex!='m' and friend_sex!='f') simple_error("wrong letter");
+	
 
 	cout << "How old is the person you're writing to?\n";
 

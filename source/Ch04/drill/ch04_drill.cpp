@@ -11,7 +11,7 @@ int main()
 	vector<double> values;
 	double lastvalue = 0;
 	double sum = 0;
-	double minvalue = 99999999;
+	double minvalue = 999999999999;
 	double maxvalue = 0;
 
 	cout << "Enter a number and a unit (c, m, i, f):\n";
@@ -24,28 +24,27 @@ int main()
 			lastvalue = length * m_per_inch;
 			values.push_back(lastvalue);
 			sum += lastvalue;
-			cout << lastvalue << "m\n";
+			cout << "That's " <<  lastvalue << "m\n";
 			break;
 
 		case 'm':
 			lastvalue = length;
 			values.push_back(length);
 			sum += lastvalue;
-			cout << lastvalue << "m\n";
 			break;
 
 		case 'c':
 			lastvalue = length * m_per_cm;
 			values.push_back(lastvalue);
 			sum += lastvalue;
-			cout << lastvalue << "m\n";
+			cout << "That's " <<  lastvalue << "m\n";
 			break;
 
 		case 'f':
 			lastvalue = length * m_per_ft;
 			values.push_back(lastvalue);
 			sum += lastvalue;
-			cout << lastvalue << "m\n";
+			cout << "That's " << lastvalue << "m\n";
 			break;
 
 		default:
@@ -65,8 +64,6 @@ int main()
 			cout << "largest so far\n";
 		}
 
-		
-		cout << maxvalue << " " << minvalue << "\n";
 
 	}
 
