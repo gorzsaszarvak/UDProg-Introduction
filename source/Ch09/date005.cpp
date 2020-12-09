@@ -113,12 +113,6 @@ try{
 	tomorrow.add_day(1);
 	cout << "Tomorrow: " << tomorrow.get_year() << ' ' << tomorrow.get_month() << ' ' << tomorrow.get_day() << "\n";
 
-	/*vector<UDChrono::Date> dates(10);
-
-	for (const auto& date : dates)
-		cout << "Vector: " << date.get_year() << ' ' << date.get_month() << ' ' << date.get_day() << "\n";
-	*/
-	
 	return 0;
 } 
 catch(UDChrono::Date::Invalid)

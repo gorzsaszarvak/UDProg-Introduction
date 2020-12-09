@@ -1,7 +1,5 @@
 #include "../../std_lib_facilities.h"
 
-nclude "std_lib_facilities.h"
-
 int main()
 try {
 	/*
@@ -30,6 +28,7 @@ try {
 	int i=0;  int j=-1; while (i<10) ++i and ++j; if (j<i) cout << " Success!\n " ;
 	int x = 4; double d = 5/(x-2); if (d!=2*x+0.5) cout << " Success!\n " ;
 	*/
+		
 	cout << " Success!\n " ;
 	
 	keep_window_open();

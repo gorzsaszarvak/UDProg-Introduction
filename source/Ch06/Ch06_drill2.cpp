@@ -63,7 +63,8 @@ void Token_stream::putback(Token t)
 Token Token_stream::get()
 {
     if (full) {       // do we already have a Token ready?
-        full = false;   // remove token from buffer
+        // remove token from buffer
+        full = false;
         return buffer;
     }
 
@@ -73,12 +74,7 @@ Token Token_stream::get()
     switch (ch) {
     case '=':    // for "print"
     case 'x':    // for "quit"
-    case '(': 
-    case ')': 
-    case '+': 
-    case '-': 
-    case '*': 
-    case '/':
+    case '(': case ')': case '+': case '-': case '*': case '/':
         return Token(ch);        // let each character represent itself
     case '.':
     case '0': case '1': case '2': case '3': case '4':
@@ -178,8 +174,8 @@ try
 {   
 
     double val = 0;
-    cout << "Welcome to our simple calculator.Please enter expressions using floating-point numbers. ";
-    cout << "Available operators are as follows: +, -, *, /, = (for printing the result) and x (for exiting the calculator).";
+    cout << "Welcome to our simple calculator.\nPlease enter expressions using floating-point numbers.\n";
+    cout << "Available operators: '+', '-', '*', '/'. Write '=' to print the result! Write 'x' to exit the calculator!\n";
     while (cin) {
         Token t = ts.get();
         if (t.kind == 'x') break; // 'q' for quit
@@ -189,6 +185,7 @@ try
             ts.putback(t);
         val = expression();
     }
+    keep_window_open();
     return 0;
 }
 catch (exception& e) {
